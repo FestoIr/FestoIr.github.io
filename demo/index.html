@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>particles.js</title>
+  <meta name="description" content="particles.js is a lightweight JavaScript library for creating particles.">
+  <meta name="author" content="Vincent Garreau" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" media="screen" href="css/style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
+  <style>html,body{font-family: Vazirmatn;}</style>
+
+</head>
+<body dir="auto">
+
+
+<!-- particles.js container -->
+<div id="">
+<header style="align-items: center;">
+  <nav>
+      <ul>
+          <li><a href="#home">خانه</a></li>
+          <li><a href="#about">درباره ما</a></li>
+          <li><a href="#products">محصولات</a></li>
+          <li><a href="#contact">ارتباط با ما</a></li>
+      </ul>
+  </nav>
+  <div class="header-right">
+      <!-- عکس خود را اینجا قرار دهید -->
+      <img src="./media/logo.svg" alt="Your Logo">
+  </div>
+</header>
+<hr> <!-- خط جداکننده -->
+
+<div class="center-container" id="particles-js">
+  
+</div>
+<footer>
+  <div class="footer-section about">
+      <h1>درباره ما</h1>
+      <br>
+      <p>ما در فروشگاه اینترنتی فستو ایران اعتقاد داریم که دانش ماندگارترین ابزار تغییر است و می خواهیم با تمرکز بر گسترش دانش فنی صنعت و تولید در بازار تجارت ایران، نقش خود را در مسیر تغییر بازی کنیم و در زمینه خرید اینترنتی قطعات صنعتی و پنوماتیک موثر باشیم.</p>
+      <br>
+      <hr>
+      <br>
+      <p>تلفن: +989129593005</p>
+      <p>روزهای کاری: هفت روز هفته</p>
+  </div>
+  <div class="footer-section links">
+      <h1>لینک‌های مهم</h1>
+      <br>
+      <ul class="bla">
+          <li><a style="color: black;" href="#">صفحه اصلی</a></li>
+          <li><a style="color: black;" href="#">محصولات</a></li>
+          <li><a style="color: black;" href="#">سوالات متداول</a></li>
+          <li><a style="color: black;" href="#">طراحی فنی</a></li>
+      </ul>
+  </div>
+  <div class="footer-section slider">
+      <a id="slider-link" href="https://example1.com">
+          <img id="slider-image" src="media/Telegram.png" alt="Slider Image">
+      </a>
+      <div class="indicators">
+          <span class="indicator"></span>
+          <span class="indicator"></span>
+          <span class="indicator"></span>
+          <span class="indicator"></span>
+      </div>
+  </div>
+  <div class="footer-section map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.4383121374312!2d51.422177!3d35.69083009999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8e01eecd83e977%3A0xbb54dc3c27bae108!2z2KjYp9iy2KfYsSDYqNiy2LHaryDYp9iq2K3Yp9iv24zZhw!5e0!3m2!1sen!2str!4v1719334708317!5m2!1sen!2str" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</footer>
+
+<script src="script.js"></script></div>
+
+<!-- scripts -->
+<script src="../particles.js"></script>
+<script src="js/app.js"></script>
+
+<!-- stats.js -->
+<script src="js/lib/stats.js"></script>
+<script>
+  var count_particles, stats, update;
+  stats = new Stats;
+  stats.setMode(0);
+  stats.domElement.style.position = 'absolute';
+  stats.domElement.style.left = '0px';
+  stats.domElement.style.top = '0px';
+  document.body.appendChild(stats.domElement);
+  count_particles = document.querySelector('.js-count-particles');
+  update = function() {
+    stats.begin();
+    stats.end();
+    if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+      count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+    }
+    requestAnimationFrame(update);
+  };
+  requestAnimationFrame(update);
+</script>
+
+</body>
+</html>
