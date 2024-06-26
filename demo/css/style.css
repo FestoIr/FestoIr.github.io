@@ -1,0 +1,261 @@
+/* =============================================================================
+   HTML5 CSS Reset Minified - Eric Meyer
+   ========================================================================== */
+
+html,body{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:#00aeff}
+body{line-height:1}
+article,aside,details,figcaption,figure,hgroup,menu,nav,section{display:block}
+/* nav ul{list-style:none} */
+blockquote,q{quotes:none}
+blockquote:before,blockquote:after,q:before,q:after{content:none}
+a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent;text-decoration:none}
+mark{background-color:#ff9;color:#000;font-style:italic;font-weight:bold}
+del{text-decoration:line-through}
+abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}
+table{border-collapse:collapse;border-spacing:0}
+hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}
+input,select{vertical-align:middle}
+li{list-style:none}
+
+
+/* =============================================================================
+   My CSS
+   ========================================================================== */
+
+/* ---- base ---- */
+
+
+canvas{
+  display:block;
+  vertical-align:bottom;
+}
+
+
+/* ---- stats.js ---- */
+
+.prt{
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  position: static;
+  background-size: cover;
+  /* background-position: 50% 50%; */
+  background-repeat: no-repeat;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* نوار بالایی */
+header {
+  background-color: #e2e2e2; /* رنگ پس زمینه نوار بالایی */
+  color: white; /* رنگ متن */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px; /* فاصله‌بندی داخلی نوار بالایی */
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 20px; /* فاصله‌بندی بین گزینه‌ها */
+}
+
+nav ul li a {
+  color: rgb(22, 22, 22);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #ff0000; /* رنگ متن هنگام هاور (موس روی گزینه) */
+}
+
+.header-right img {
+  width: 50px; /* عرض لوگو */
+  height: auto;
+}
+
+hr {
+  border: none; /* حذف حاشیه خط */
+  border-top: 1px solid #ccc; /* خط جداکننده با رنگ و ضخامت دلخواه */
+  margin: 0;
+}
+
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(70vh - 60px);
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  background-color: #f0f0f0;
+  padding :100px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(17, 17, 17, 0.1);
+  width: 620px;
+  height: 200px;
+  margin-right: 50%;
+}
+
+.content {
+  flex: 1;
+  text-align: left;
+}
+
+.content img {
+  width: 200px;
+  height: auto;
+  padding: 1px;
+}
+
+.text {
+  flex: 1;
+  text-align: right;
+}
+
+.text p {
+  margin-bottom: 1px;
+}
+
+.more {
+  padding: 10px 20px;
+  background-color: transparent;
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.more:hover {
+  background-color: transparent;
+}
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #d6d6d6;
+  color: rgb(14, 14, 14);
+  padding: 10px;
+  border-radius: 30px 30px 0 0;
+}
+
+.footer-section {
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.about {
+  width: 35%;
+  border-right: 2px solid #555;
+}
+
+.about hr {
+  border: none;
+  border-top: 1px solid #555;
+  margin: 5px 0;
+}
+
+.links {
+  width: 15%;
+}
+
+.links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.links li {
+  margin: 5px 0;
+}
+
+.links a {
+  color: white;
+  text-decoration: none;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+.slider {
+  width: 25%;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider img {
+  width: 150px;
+  height: 150px;
+}
+
+.indicators {
+  text-align: center;
+  margin-top: 5px;
+}
+
+.indicator {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 0 2px;
+  background-color: #555;
+}
+
+.indicator.active {
+  background-color: #fff;
+}
+
+.map {
+  width: 25%;
+}
+
+/* استایل برای نمایش در موبایل ها (تا 480 پیکسل) */
+@media only screen and (max-width: 480px) {
+body {
+  font-size: 14px;
+}
+img {
+  width: 100%;
+}
+}
+
+/* استایل برای نمایش در تبلت ها (تا 768 پیکسل) */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+body {
+  font-size: 16px;
+}
+img {
+  width: 75%;
+}
+}
+
+ul {
+  align-items: center; 
+}
+
+/* استایل برای نمایش در دسکتاپ (بالای 768 پیکسل) */
+@media only screen and (min-width: 769px) {
+body {
+  font-size: 18px;
+}
+img {
+  width: 50%;
+}
+}
